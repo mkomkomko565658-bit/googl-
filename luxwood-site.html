@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لوكس وود | أثاث وأبواب خشبية فاخرة</title>
+<meta name="description" content="طاولات وأبواب وكراسي خشبية فاخرة">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--mut:#767676;--line:#eee;--soft:#f6f6f6;--wood:#8b5e34}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Cairo',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:auto;padding:0 16px}
+.muted{color:var(--mut)}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;cursor:pointer;background:var(--ink);color:#fff;padding:12px 22px;border-radius:8px;font:700 .95rem 'Cairo',sans-serif;transition:transform .2s,opacity .2s}
+.btn:hover{opacity:.85}
+.btn:active{transform:scale(.96)}
+.btn.line{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.white{background:#fff;color:#111}
+.btn.red{background:#b42318}
+.btn.sm{padding:8px 14px;font-size:.85rem}
+.topbar{background:#111;color:#fff;text-align:center;font-size:.8rem;padding:7px 10px}
+.hd{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.2rem;cursor:pointer;user-select:none;transition:transform .25s}
+.logo:hover{transform:scale(1.03)}
+.logo:active{transform:scale(.94)}
+.logo img,.logo svg{width:36px;height:36px;border-radius:10px;object-fit:cover}
+.hd .ico{font-size:1.35rem;padding:6px;border-radius:50%}
+.pills{display:flex;gap:8px;overflow-x:auto;padding:12px 0;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pills a{white-space:nowrap;padding:8px 16px;border-radius:999px;background:var(--soft);font-size:.9rem;font-weight:600;transition:all .25s}
+.pills a:hover,.pills a.on{background:var(--ink);color:#fff}
+.banner{position:relative;height:240px;overflow:hidden;background:#111}
+@media(min-width:700px){.banner{height:380px}}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;background:linear-gradient(120deg,#3b2a18,var(--wood));display:flex;align-items:flex-end;color:#fff}
+.slide.on{opacity:1}
+.slide img,.slide video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide .cap{position:relative;width:100%;padding:44px 16px 46px;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.slide h2{font-size:1.3rem}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:2}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);transition:all .3s}
+.dots i.on{background:#fff;width:22px;border-radius:4px}
+.hero{background:linear-gradient(120deg,#111,#3a3a3a,#111);background-size:200% 200%;animation:shift 12s ease infinite;color:#fff;padding:60px 0}
+@keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero .tag{display:inline-block;background:var(--wood);padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:700}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);margin:14px 0}
+.hero p{max-width:520px;color:#cfcfcf}
+.hero .btn{margin-top:12px}
+.sec{padding:36px 0}
+.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.sh h2{font-size:1.3rem}
+.sh a{font-weight:700;font-size:.9rem;color:var(--mut)}
+.ph{padding:28px 0 8px}
+.ph h1{font-size:1.6rem}
+.ph p{margin:4px 0 0;color:var(--mut);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{display:flex;flex-direction:column;transition:transform .35s}
+.card:hover{transform:translateY(-4px)}
+.media{aspect-ratio:3/4;background:linear-gradient(135deg,#f2f2f2,#e2e2e2);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:3.2rem}
+.media img,.media video{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover .media img,.card:hover .media video{transform:scale(1.05)}
+.info{padding:10px 2px 0;display:flex;flex-direction:column;flex:1}
+.info h3{font-size:.95rem;font-weight:600}
+.info p{font-size:.82rem;color:var(--mut);margin:4px 0 10px;flex:1}
+.add{display:block;text-align:center;background:var(--ink);color:#fff;padding:10px;border-radius:8px;font-weight:700;font-size:.88rem;transition:transform .2s,background .2s}
+.add:hover{background:#25d366}
+.add:active{transform:scale(.95)}
+.empty{text-align:center;padding:60px 0;color:var(--mut)}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;padding:24px 0;border-top:1px solid var(--line)}
+.strip div{font-size:.85rem;font-weight:600}
+.strip span{display:block;font-size:1.5rem}
+.box{max-width:440px;margin:30px auto;padding:28px;border:1px solid var(--line);border-radius:14px}
+label{display:block;font-weight:700;font-size:.88rem;margin:12px 0 6px}
+input,textarea,select{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:#000;transition:border-color .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ink)}
+textarea{min-height:80px;resize:vertical}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.adm{padding:20px 0 60px}
+.adm-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:900px){.adm-grid{grid-template-columns:1fr 1.2fr;align-items:start}}
+.panel{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.panel h3{margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chip{background:var(--soft);padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:600}
+.chip b{color:#e3166a;cursor:pointer;margin-inline-start:6px}
+.tbl{width:100%;border-collapse:collapse;font-size:.88rem}
+.tbl th,.tbl td{padding:10px 6px;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
+.tbl th{color:var(--mut);font-weight:600}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.fp{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.fp input[type=file]{flex:1;min-width:0;padding:8px;font-size:.85rem}
+.fst{display:block;margin-top:4px;color:#25a05a;font-weight:600}
+.back{margin-top:14px;background:var(--soft);border:0;padding:8px 14px;border-radius:999px;font:600 .85rem 'Cairo',sans-serif;cursor:pointer}
+footer{background:var(--soft);text-align:center;padding:28px 16px;margin-top:40px;font-size:.85rem;color:var(--mut)}
+footer b{color:var(--ink)}
+.tabbar{display:none}
+.wa-float{position:fixed;left:16px;bottom:18px;width:52px;height:52px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 20px rgba(37,211,102,.35);z-index:45;transition:transform .25s}
+.wa-float:hover{transform:scale(1.1)}
+@media(max-width:699px){
+  body{padding-bottom:72px}
+  .tabbar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px));z-index:55}
+  .tabbar a{display:flex;flex-direction:column;align-items:center;font-size:.72rem;font-weight:600;color:var(--mut)}
+  .tabbar a span{font-size:1.3rem}
+  .wa-float{bottom:84px}
+}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.page{animation:fadeUp .5s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">شحن سريع · استشارة وتسعير مجاني عبر واتساب</div>
+<header class="hd">
+  <div class="wrap">
+    <div class="logo" id="logo"></div>
+    <a class="ico" href="#/profile" aria-label="حسابي">👤</a>
+  </div>
+  <div class="wrap"><nav class="pills" id="pills"></nav></div>
+</header>
+<main id="app"></main>
+<footer><b id="fname"></b><br><span>جميع الحقوق محفوظة © <span id="year"></span></span></footer>
+<nav class="tabbar">
+  <a href="#/"><span>🏠</span>الرئيسية</a>
+  <a href="#/profile"><span>👤</span>حسابي</a>
+  <a id="tbWa" target="_blank" rel="noopener"><span>💬</span>واتساب</a>
+</nav>
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
+
+<script>
+/* ================= البيانات ================= */
+const ADMIN = { u: 'Nzc3NTY1NjU4', p: 'Nzc3NjI0NTY3' };
+const KEY = 'luxwood_v3';
+const SEED = {
+  cats: [
+    { id: 'tables', name: 'الطاولات', icon: '🪑' },
+    { id: 'doors', name: 'الأبواب', icon: '🚪' },
+    { id: 'chairs', name: 'الكراسي', icon: '💺' }
+  ],
+  products: [
+    { id: 1, cat: 'tables', name: 'طاولة طعام من خشب الجوز', desc: 'طاولة واسعة بتشطيب فاخر للمجالس الراقية', img: '', video: '' },
+    { id: 2, cat: 'tables', name: 'طاولة قهوة دائرية', desc: 'قاعدة معدنية ذهبية وسطح خشبي طبيعي', img: '', video: '' },
+    { id: 3, cat: 'doors', name: 'باب خشب سويسري مصفح', desc: 'مقاوم للرطوبة والحرارة مع نقوش كلاسيكية', img: '', video: '' },
+    { id: 4, cat: 'doors', name: 'باب زجاجي بإطار خشبي', desc: 'يجمع الإضاءة الطبيعية والدفء الخشبي', img: '', video: '' },
+    { id: 5, cat: 'chairs', name: 'كرسي طعام مخملي', desc: 'هيكل خشبي وتنجيد فاخر مريح', img: '', video: '' },
+    { id: 6, cat: 'chairs', name: 'كرسي استرخاء بذراعين', desc: 'تصميم عصري يناسب المجالس والمكتبات', img: '', video: '' }
+  ],
+  banners: [{ id: 1, title: 'عروض الموسم: خصم على الطاولات', img: '', video: '', link: '#/tables' }],
+  settings: { name: 'لوكس وود', title: 'لوكس وود | أثاث وأبواب خشبية فاخرة', desc: 'طاولات وأبواب وكراسي خشبية فاخرة بتصاميم عصرية', wa: '966500000000', logo: '' }
+};
+
+function load() {
+  try {
+    const s = JSON.parse(localStorage.getItem(KEY));
+    if (s && s.cats && s.products) return { banners: [], settings: {}, ...s };
+  } catch (e) {}
+  return JSON.parse(JSON.stringify(SEED));
+}
+let S = load();
+S.settings = { ...SEED.settings, ...S.settings };
+
+// الحفظ تلقائي في متصفح الجهاز
+function persist() {
+  try { localStorage.setItem(KEY, JSON.stringify(S)); }
+  catch (e) { alert('تعذر الحفظ: مساحة المتصفح ممتلئة. احذف بعض الصور أو الفيديوهات، أو صدّر نسخة احتياطية.'); }
+}
+
+/* ================= أدوات ================= */
+const $ = (s) => document.querySelector(s);
+const esc = (t) => String(t ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const catName = (id) => (S.cats.find((c) => c.id === id) || { name: id }).name;
+const catIcon = (id) => (S.cats.find((c) => c.id === id) || { icon: '📦' }).icon;
+const nextId = () => Date.now() + Math.floor(Math.random() * 1000);
+const isAdmin = () => { try { return localStorage.getItem('lw_admin') === '1'; } catch (e) { return false; } };
+
+function shrinkImage(file) {
+  return new Promise((res, rej) => {
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, 1000 / Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      const x = c.getContext('2d');
+      x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+      x.drawImage(img, 0, 0, c.width, c.height);
+      res(c.toDataURL('image/jpeg', 0.82));
+    };
+    img.onerror = () => rej(new Error('ملف الصورة غير صالح'));
+    img.src = URL.createObjectURL(file);
+  });
+}
+function readFile(file) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = rej;
+    r.readAsDataURL(file);
+  });
+}
+async function uploadFile(file) {
+  if (file.type.startsWith('video/')) {
+    if (file.size > 2 * 1024 * 1024) throw new Error('الفيديو أكبر من 2 ميجابايت. اختر فيديو أقصر أو أخف.');
+    return readFile(file);
+  }
+  return shrinkImage(file);
+}
+
+function waLink(p) {
+  return `https://wa.me/${S.settings.wa}?text=${encodeURIComponent(`مرحباً، أرغب بالحصول على سعر:\n${p.name}`)}`;
+}
+function media(p) {
+  if (p.video) return `<video src="${p.video}" autoplay muted loop playsinline></video>`;
+  if (p.img) return `<img src="${p.img}" alt="${esc(p.name)}" loading="lazy">`;
+  return `<span>${catIcon(p.cat)}</span>`;
+}
+function card(p) {
+  return `<article class="card reveal"><div class="media">${media(p)}</div>
+    <div class="info"><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>
+    <a class="add" href="${waLink(p)}" target="_blank" rel="noopener">إضافة عبر واتساب</a></div></article>`;
+}
+function bannerHTML() {
+  const b = S.banners;
+  if (!b.length) return '';
+  return `<section class="banner" id="banner"><div>${b.map((x, i) => `<a class="slide${i === 0 ? ' on' : ''}" href="${esc(x.link || '#/')}">${x.video ? `<video src="${x.video}" autoplay muted loop playsinline></video>` : x.img ? `<img src="${x.img}" alt="">` : ''}<div class="cap"><h2>${esc(x.title)}</h2></div></a>`).join('')}</div><div class="dots">${b.map((_, i) => `<i class="${i === 0 ? 'on' : ''}"></i>`).join('')}</div></section>`;
+}
+function ff(name, label, accept, val = '') {
+  return `<label>${label}</label><div class="fp"><input type="file" accept="${accept}" data-target="${name}"><button type="button" class="btn sm line" data-clr="${name}">حذف</button></div><small class="fst">${val ? '✓ يوجد ملف محفوظ' : ''}</small><input type="hidden" name="${name}" value="${esc(val)}">`;
+}
+function backBar() { return `<div class="wrap"><button class="back" onclick="history.length>1?history.back():(location.hash='#/')">→ رجوع</button></div>`; }
+
+/* ================= الصفحات ================= */
+const pages = {
+  home() {
+    return `<div class="page">${bannerHTML()}
+    <section class="hero"><div class="wrap">
+      <span class="tag">تشكيلة جديدة 2026</span>
+      <h1>أثاث وأبواب<br>بلمسة خشبية فاخرة</h1>
+      <p>${esc(S.settings.desc)}</p>
+      <a class="btn white" href="#/all">تسوق الآن</a>
+    </div></section>
+    ${S.cats.map((c) => {
+      const items = S.products.filter((p) => p.cat === c.id);
+      return `<section class="sec"><div class="wrap">
+        <div class="sh"><h2>${esc(c.icon)} ${esc(c.name)}</h2><a href="#/${esc(c.id)}">عرض الكل ←</a></div>
+        ${items.length ? `<div class="grid">${items.slice(0, 4).map(card).join('')}</div>` : '<p class="muted">لا توجد منتجات بعد</p>'}
+      </div></section>`;
+    }).join('')}
+    <div class="wrap"><div class="strip">
+      <div><span>🚚</span>توصيل ومتابعة</div><div><span>🌳</span>خشب طبيعي</div><div><span>💬</span>تسعير فوري</div>
+    </div></div></div>`;
+  },
+  list(cat) {
+    const items = cat === 'all' ? S.products : S.products.filter((p) => p.cat === cat);
+    const title = cat === 'all' ? '🛍️ كل المنتجات' : `${esc(catIcon(cat))} ${esc(catName(cat))}`;
+    return `<div class="page"><div class="wrap">
+      <div class="ph"><h1>${title}</h1><p>${items.length} منتج · تواصل معنا للسعر</p></div>
+      ${items.length ? `<div class="grid" style="margin-top:16px">${items.map(card).join('')}</div>` : '<div class="empty">لا توجد منتجات بعد</div>'}
+    </div></div>`;
+  },
+  about() {
+    return `<div class="page"><div class="wrap ph" style="text-align:center;padding:50px 0">
+      <h1>من نحن</h1>
+      <p style="max-width:560px;margin:14px auto">${esc(S.settings.desc)}. نهتم بكل تفصيلة في القطعة، من اختيار الخشب إلى آخر لمسة تشطيب.</p>
+    </div></div>`;
+  },
+  profile() {
+    let p = null;
+    try { p = JSON.parse(localStorage.getItem('lw_profile')); } catch (e) {}
+    if (p) return `<div class="page"><div class="box" style="text-align:center">
+      <div style="font-size:3rem">👤</div><h2>مرحباً ${esc(p.name)}</h2><p class="muted">${esc(p.phone)}</p>
+      <div class="row" style="justify-content:center"><a class="btn" href="#/">تصفح المنتجات</a>
+      <button class="btn line" id="logoutP">تسجيل الخروج</button></div></div></div>`;
+    return `<div class="page"><div class="box">
+      <h2>إنشاء ملف شخصي</h2><p class="muted" style="font-size:.9rem">اختياري. يمكنك التصفح بدون ملف.</p>
+      <form id="pForm">
+        <label>الاسم</label><input name="name" required>
+        <label>رقم الجوال</label><input name="phone" type="tel" required>
+        <div class="row"><button class="btn" type="submit">حفظ الملف</button></div>
+      </form></div></div>`;
+  },
+  login() {
+    return `<div class="page"><div class="box">
+      <h2>تسجيل دخول مدير النظام</h2>
+      <form id="lForm">
+        <label>اسم المستخدم</label><input name="u" required autocomplete="username">
+        <label>كلمة السر</label><input name="p" type="password" required autocomplete="current-password">
+        <div class="row"><button class="btn" type="submit">دخول</button></div>
+        <p id="lMsg" style="color:#b42318;font-size:.9rem"></p>
+      </form></div></div>`;
+  },
+  admin() {
+    const cats = S.cats.map((c) => `<span class="chip">${esc(c.icon)} ${esc(c.name)} <b data-delcat="${esc(c.id)}">✕</b></span>`).join('');
+    const bans = S.banners.map((b) => `<span class="chip">${esc(b.title)} <b data-delban="${b.id}">✕</b></span>`).join('') || '<span class="muted">لا توجد بانرات</span>';
+    const rows = S.products.map((p) => `<tr><td>${esc(p.name)}</td><td>${esc(catName(p.cat))}</td>
+      <td class="acts"><button class="btn sm line" data-edit="${p.id}">تعديل</button>
+      <button class="btn sm red" data-del="${p.id}">حذف</button></td></tr>`).join('');
+    return `<div class="page adm"><div class="wrap">
+      <div class="row" style="justify-content:space-between;margin-top:10px"><h1>لوحة المطور</h1>
+        <button class="btn sm line" id="logoutA">تسجيل الخروج</button></div>
+      <div class="adm-grid" style="margin-top:20px">
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div class="panel"><h3 id="formTitle">إضافة منتج</h3>
+            <form id="prodForm">
+              <input type="hidden" name="id">
+              <label>الاسم</label><input name="name" required>
+              <label>القسم</label><select name="cat">${S.cats.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('')}</select>
+              <label>الوصف</label><textarea name="desc"></textarea>
+              ${ff('img', 'الصورة', 'image/*')}
+              ${ff('video', 'الفيديو القصير (حتى 2 ميجابايت)', 'video/*')}
+              <div class="row"><button class="btn" type="submit">حفظ المنتج</button><button class="btn line" type="button" id="resetP">جديد</button></div>
+            </form></div>
+          <div class="panel"><h3>البانرات (العروض)</h3>
+            <div class="chips">${bans}</div>
+            <form id="banForm">
+              <label>عنوان العرض</label><input name="title" required>
+              ${ff('img', 'الصورة', 'image/*')}
+              ${ff('video', 'الفيديو (اختياري)', 'video/*')}
+              <label>رابط عند الضغط (اختياري)</label><input name="link" placeholder="#/tables">
+              <div class="row"><button class="btn" type="submit">إضافة بانر</button></div>
+            </form></div>
+          <div class="panel"><h3>الأقسام</h3>
+            <div class="chips">${cats}</div>
+            <form id="catForm">
+              <label>اسم القسم الجديد</label><input name="name" required>
+              <label>أيقونة (إيموجي)</label><input name="icon" placeholder="🛋️" maxlength="4">
+              <div class="row"><button class="btn" type="submit">إضافة قسم</button></div>
+            </form></div>
+          <div class="panel"><h3>إعدادات الموقع</h3>
+            <form id="setForm">
+              <label>اسم الموقع</label><input name="name" value="${esc(S.settings.name)}" required>
+              <label>عنوان الصفحة (نتائج البحث)</label><input name="title" value="${esc(S.settings.title)}">
+              <label>وصف الموقع (نتائج البحث)</label><textarea name="desc">${esc(S.settings.desc)}</textarea>
+              ${ff('logo', 'شعار الموقع', 'image/*', S.settings.logo)}
+              <label>رقم واتساب (بالصيغة الدولية بدون +)</label><input name="wa" value="${esc(S.settings.wa)}">
+              <div class="row"><button class="btn" type="submit">حفظ الإعدادات</button></div>
+            </form></div>
+          <div class="panel"><h3>النسخ الاحتياطي</h3>
+            <p class="muted" style="font-size:.9rem">البيانات محفوظة في متصفح هذا الجهاز. صدّر نسخة احتياطية بين فترة وأخرى، واستوردها عند الحاجة.</p>
+            <div class="row"><button class="btn sm" id="exportB">تصدير نسخة</button>
+            <label class="btn sm line" style="margin:0;cursor:pointer">استيراد نسخة<input type="file" accept="application/json" id="importB" hidden></label></div>
+          </div>
+        </div>
+        <div class="panel"><h3>المنتجات (${S.products.length})</h3>
+          <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>الاسم</th><th>القسم</th><th></th></tr></thead>
+          <tbody>${rows || '<tr><td colspan="3" class="muted">لا توجد منتجات</td></tr>'}</tbody></table></div>
+        </div>
+      </div></div></div>`;
+  }
+};
+
+/* ================= الواجهة ================= */
+function applySettings() {
+  document.title = S.settings.title;
+  document.querySelector('meta[name="description"]').setAttribute('content', S.settings.desc);
+  $('#logo').innerHTML = (S.settings.logo
+    ? `<img src="${S.settings.logo}" alt="">`
+    : `<svg viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#111"/><path d="M11 13v14l9-6 9 6V13" stroke="#fff" stroke-width="3" fill="none" stroke-linejoin="round"/></svg>`)
+    + `<span>${esc(S.settings.name)}</span>`;
+  $('#fname').textContent = S.settings.name;
+  $('#year').textContent = new Date().getFullYear();
+  const wa = `https://wa.me/${S.settings.wa}`;
+  $('#waFloat').href = wa;
+  $('#tbWa').href = wa;
+}
+function buildNav() {
+  const items = [['#/', 'الرئيسية', 'home'], ['#/all', '🛍️ الكل', 'all'], ...S.cats.map((c) => [`#/${c.id}`, `${c.icon} ${c.name}`, c.id])];
+  $('#pills').innerHTML = items.map(([h, t, r]) => `<a href="${h}" data-r="${r}">${esc(t)}</a>`).join('');
+}
+let slideTimer = null;
+function startSlider() {
+  clearInterval(slideTimer);
+  const sl = document.querySelectorAll('#banner .slide');
+  const dt = document.querySelectorAll('#banner .dots i');
+  if (sl.length < 2) return;
+  let i = 0;
+  slideTimer = setInterval(() => {
+    sl[i].classList.remove('on'); dt[i].classList.remove('on');
+    i = (i + 1) % sl.length;
+    sl[i].classList.add('on'); dt[i].classList.add('on');
+  }, 5000);
+}
+function observe() {
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal:not(.in)').forEach((el) => io.observe(el));
+}
+function route() {
+  const parts = (location.hash.slice(1) || '/').split('/').filter(Boolean);
+  const r = parts[0] || 'home';
+  let html;
+  if (r === 'admin' || r === 'login') html = isAdmin() ? pages.admin() : pages.login();
+  else if (r === 'all' || S.cats.some((c) => c.id === r)) html = pages.list(r);
+  else if (r === 'profile') html = pages.profile();
+  else if (r === 'about') html = pages.about();
+  else html = pages.home();
+
+  buildNav();
+  $('#app').innerHTML = (r !== 'home' && r !== 'admin' && r !== 'login' ? backBar() : '') + html;
+  document.querySelectorAll('#pills a').forEach((a) => a.classList.toggle('on', a.dataset.r === r));
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  bind();
+  observe();
+  startSlider();
+}
+
+/* ================= الأحداث ================= */
+function bind() {
+  const lf = $('#lForm');
+  if (lf) lf.onsubmit = (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(lf));
+    if (d.u.trim() === ADMIN.u && d.p.trim() === ADMIN.p) {
+      localStorage.setItem('lw_admin', '1');
+      location.hash = '#/admin';
+      route();
+    } else $('#lMsg').textContent = 'اسم المستخدم أو كلمة السر غير صحيحة';
+  };
+
+  const pf = $('#pForm');
+  if (pf) pf.onsubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('lw_profile', JSON.stringify(Object.fromEntries(new FormData(pf))));
+    route();
+  };
+  const lo = $('#logoutP');
+  if (lo) lo.onclick = () => { localStorage.removeItem('lw_profile'); route(); };
+
+  const la = $('#logoutA');
+  if (la) la.onclick = () => { localStorage.removeItem('lw_admin'); location.hash = '#/'; route(); };
+
+  document.querySelectorAll('input[type=file][data-target]').forEach((inp) => inp.onchange = async () => {
+    const f = inp.files[0];
+    if (!f) return;
+    const status = inp.parentElement.nextElementSibling;
+    status.textContent = 'جاري التحضير...';
+    try {
+      inp.form.elements[inp.dataset.target].value = await uploadFile(f);
+      status.textContent = '✓ تم اختيار الملف';
+    } catch (err) {
+      status.textContent = '';
+      inp.value = '';
+      alert(err.message);
+    }
+  });
+  document.querySelectorAll('[data-clr]').forEach((b) => b.onclick = () => {
+    b.form.elements[b.dataset.clr].value = '';
+    b.parentElement.nextElementSibling.textContent = '';
+    b.parentElement.querySelector('input[type=file]').value = '';
+  });
+
+  const pr = $('#prodForm');
+  if (pr) {
+    pr.onsubmit = (e) => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(pr));
+      const data = { cat: d.cat, name: d.name.trim(), desc: d.desc.trim(), img: d.img, video: d.video };
+      if (d.id) Object.assign(S.products.find((x) => x.id == d.id), data);
+      else S.products.push({ id: nextId(), ...data });
+      persist(); route();
+    };
+    $('#resetP').onclick = () => route();
+  }
+  document.querySelectorAll('[data-edit]').forEach((b) => b.onclick = () => {
+    const p = S.products.find((x) => x.id == b.dataset.edit);
+    const f = $('#prodForm');
+    f.id.value = p.id; f.name.value = p.name; f.cat.value = p.cat; f.desc.value = p.desc;
+    f.img.value = p.img; f.video.value = p.video;
+    $('#formTitle').textContent = 'تعديل منتج';
+    f.scrollIntoView({ behavior: 'smooth' });
+  });
+  document.querySelectorAll('[data-del]').forEach((b) => b.onclick = () => {
+    if (!confirm('هل تريد حذف هذا المنتج؟')) return;
+    S.products = S.products.filter((x) => x.id != b.dataset.del);
+    persist(); route();
+  });
+
+  const bf = $('#banForm');
+  if (bf) bf.onsubmit = (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(bf));
+    S.banners.push({ id: nextId(), title: d.title.trim(), img: d.img, video: d.video, link: d.link.trim() });
+    persist(); route();
+  };
+  document.querySelectorAll('[data-delban]').forEach((b) => b.onclick = () => {
+    S.banners = S.banners.filter((x) => x.id != b.dataset.delban);
+    persist(); route();
+  });
+
+  const cf = $('#catForm');
+  if (cf) cf.onsubmit = (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(cf));
+    S.cats.push({ id: 'c' + Date.now().toString(36), name: d.name.trim(), icon: d.icon.trim() || '📦' });
+    persist(); route();
+  };
+  document.querySelectorAll('[data-delcat]').forEach((b) => b.onclick = () => {
+    const c = S.cats.find((x) => x.id === b.dataset.delcat);
+    if (!confirm(`حذف قسم "${c.name}" وكل منتجاته؟`)) return;
+    S.cats = S.cats.filter((x) => x.id !== c.id);
+    S.products = S.products.filter((p) => p.cat !== c.id);
+    persist(); route();
+  });
+
+  const sf = $('#setForm');
+  if (sf) sf.onsubmit = (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(sf));
+    S.settings = { name: d.name.trim(), title: d.title.trim(), desc: d.desc.trim(), logo: d.logo, wa: d.wa.replace(/\D/g, '') };
+    persist(); applySettings(); route();
+  };
+
+  const ex = $('#exportB');
+  if (ex) ex.onclick = () => {
+    const blob = new Blob([JSON.stringify(S, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'luxwood-backup.json';
+    a.click();
+  };
+  const im = $('#importB');
+  if (im) im.onchange = async () => {
+    const f = im.files[0];
+    if (!f) return;
+    try {
+      const data = JSON.parse(await f.text());
+      if (!data.cats || !data.products) throw new Error('الملف ليس نسخة صحيحة');
+      S = { banners: [], settings: {}, ...data };
+      S.settings = { ...SEED.settings, ...S.settings };
+      persist(); applySettings(); route();
+    } catch (err) { alert('تعذر الاستيراد: ' + err.message); }
+  };
+}
+
+/* ================= البداية ================= */
+document.addEventListener('click', (e) => {
+  if (e.target.closest('#logo')) location.hash = isAdmin() ? '#/admin' : '#/login';
+});
+window.addEventListener('hashchange', route);
+applySettings();
+route();
+</script>
+</body>
+</html>
